@@ -608,12 +608,6 @@ section {
   transition: width 1.5s ease-in-out;
 }
 
-#faqs {
-}
-
-#contato {
-}
-
 /* RESPONSIVO PARA MOBILE */
 @media (max-width: 768px) {
   header {
