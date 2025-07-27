@@ -17,11 +17,45 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 }
 ?>
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-<form method="POST">
-    <h2>Cadastro</h2>
-    Nome: <input type="text" name="nome" required><br>
-    Email: <input type="email" name="email" required><br>
-    Senha: <input type="password" name="senha" required><br>
-    <button type="submit">Cadastrar</button>
-</form>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/cadastro.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="bolhas">
+        <div class="bolha"></div>
+        <div class="bolha"></div>
+        <div class="bolha"></div>
+        <div class="bolha"></div>
+        <div class="bolha"></div>
+    </div>
+
+    <header class="navbar">
+        <img src="../imagem/graduation_school.svg" alt="logo">
+        <nav>
+            <ul>
+                <li><a href="cadastro.php" class="botao"><span>Criar conta</span></a></li>
+                <li><a href="login.php" class="botao"><span>Entrar</span></a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="cadastro">
+        <div class="container">
+            <form method="POST">
+                <h2>Cadastro</h2>
+                <span>Nome:</span><input type="text" name="nome" required>
+                <span>Email:</span><input type="email" name="email" required>
+                <span>Senha:</span><input type="password" name="senha" required>
+                <button type="submit" class="botao">Cadastrar</button>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>

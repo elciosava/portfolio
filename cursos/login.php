@@ -1,24 +1,24 @@
 <?php
-require 'conexao.php';
-session_start();
+    require 'conexao/conexao.php';
+    session_start();
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $email = $_POST["email"];
-    $senha = $_POST["senha"];
+    if ($_SERVER["REQUEST_METHOD"] === "POST") {
+        $email = $_POST["email"];
+        $senha = $_POST["senha"];
 
-    $sql = "SELECT * FROM usuarios WHERE email = ?";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([$email]);
-    $usuario = $stmt->fetch();
+        $sql = "SELECT * FROM usuarios WHERE email = ?";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([$email]);
+        $usuario = $stmt->fetch();
 
-    if ($usuario && password_verify($senha, $usuario['senha'])) {
-        $_SESSION['usuario'] = $usuario;
-        header("Location: painel-aluno.php");
-        exit;
-    } else {
-        echo "Email ou senha incorretos!";
+        if ($usuario && password_verify($senha, $usuario['senha'])) {
+            $_SESSION['usuario'] = $usuario;
+            header("Location: painel-aluno.php");
+            exit;
+        } else {
+            echo "Email ou senha incorretos!";
+        }
     }
-}
 ?>
 
 <form method="POST">

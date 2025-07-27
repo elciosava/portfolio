@@ -3,6 +3,7 @@
   padding: 0;
   border: 0;
   box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
 /*bolhas aleatorias*/
@@ -85,13 +86,11 @@ html {
 }
 
 body {
-  background: linear-gradient(
-    to right,
-    #300513,
-    #090607 30%,
-    #090607 70%,
-    #300513
-  );
+  background: linear-gradient(to right,
+      #300513,
+      #090607 30%,
+      #090607 70%,
+      #300513);
   font-family: "Rajdhani", sans-serif;
 }
 
@@ -187,6 +186,29 @@ header img {
   color: #fff;
 }
 
+.botao-card {
+  position: relative;
+  display: inline-block;
+  background: #ff0048;
+  border-radius: 4px;
+  overflow: hidden;
+  text-decoration: none;
+  color: white;
+  font-family: sans-serif;
+  padding: 6px;
+  font-size: 0.7em;
+}
+
+.botao-card span {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.botao-card:hover span {
+  animation: deslizar 0.2s ease-in-out forwards;
+  color: #fff;
+}
+
 @keyframes deslizar {
   0% {
     transform: translateX(0%);
@@ -262,6 +284,7 @@ header img {
 }
 
 @keyframes bounce {
+
   0%,
   100% {
     transform: translateY(0);
@@ -512,11 +535,9 @@ section {
   inset: 0;
   border-radius: 12px;
   padding: 1.5px;
-  background: radial-gradient(
-    circle at var(--x) var(--y),
-    rgba(255, 0, 76, 0.8),
-    transparent 80%
-  );
+  background: radial-gradient(circle at var(--x) var(--y),
+      rgba(255, 0, 76, 0.8),
+      transparent 80%);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -611,16 +632,19 @@ section {
 /* RESPONSIVO PARA MOBILE */
 @media (max-width: 768px) {
   header {
-    height: auto; /* deixa o conteúdo determinar a altura */
+    height: auto;
+    /* deixa o conteúdo determinar a altura */
     padding: 10px 0;
-    background-color: #000; /* ou o que preferir */
+    background-color: #000;
+    /* ou o que preferir */
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
   header nav {
-    display: none; /* oculta o menu no mobile */
+    display: none;
+    /* oculta o menu no mobile */
   }
 
   header img {
@@ -634,9 +658,11 @@ section {
     padding: 30px 10px;
     scroll-margin-top: 60px;
   }
+
   .navbar {
     position: static;
   }
+
   #inicio {
     background-color: transparent;
     height: auto;
