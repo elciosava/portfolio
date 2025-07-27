@@ -1,9 +1,9 @@
 <?php
 // Conexão com o banco
 $host = "localhost";
-$dbname = "seu_banco";
-$user = "seu_usuario";
-$pass = "sua_senha";
+$dbname = "portfolio";
+$user = "root";
+$pass = "s4va6o841A@";
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $pass);
@@ -41,7 +41,7 @@ try {
 </head>
 <body>
     <h2>Relatório de Visitas</h2>
-    <a class="btn-exportar" href="exportar_csv.php" target="_blank">📥 Exportar CSV</a>
+    <a class="btn-exportar" href="exportar.php" target="_blank">📥 Exportar CSV</a>
     <table>
         <thead>
             <tr>
