@@ -25,7 +25,7 @@ if ($data && $data['status'] === 'success') {
     $cidade = $data['city'];
 }
 
-// Conexão com o banco (ajuste os dados abaixo)
+// Conexão com o banco
 $host = "localhost";
 $dbname = "portfolio";
 $user = "root";
@@ -45,12 +45,7 @@ try {
         $stmt->execute([$ip, $cidade, $estado, $pais]);
     }
 
-    // Insere os dados no banco
-    $stmt = $pdo->prepare("INSERT INTO visitas (ip, cidade, estado, pais, data_hora) VALUES (?, ?, ?, ?, NOW())");
-    $stmt->execute([$ip, $cidade, $estado, $pais]);
-
 } catch (PDOException $e) {
-    // Em produção, evite exibir detalhes do erro
     echo "Erro ao conectar: " . $e->getMessage();
 }
 ?>
