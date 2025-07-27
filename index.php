@@ -1,4 +1,4 @@
-<?php include 'visita.php'; ?>
+<?php include 'visitas.php'; ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
