@@ -14,7 +14,7 @@ try {
             DATE_FORMAT(data_hora, '%H:%i') as minuto,
             COUNT(*) as total
         FROM visitas
-        WHERE data_hora >= NOW() - INTERVAL 10 MINUTE
+        WHERE data_hora >= NOW() - INTERVAL 30 MINUTE
         GROUP BY minuto
         ORDER BY minuto ASC
     ");

@@ -20,14 +20,32 @@ try {
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <title>Relatório de Visitas</title>
     <style>
-        body { font-family: Arial; margin: 20px; }
-        table { width: 100%; border-collapse: collapse; }
-        th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
-        th { background-color: #f4f4f4; }
+        body {
+            font-family: Arial;
+            margin: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
         .btn-exportar {
             padding: 10px 20px;
             background-color: #0066cc;
@@ -37,11 +55,58 @@ try {
             margin-bottom: 10px;
             display: inline-block;
         }
+
+        .cabecalho {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-content: center;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        ul {
+            list-style: none;
+        }
+        li{            
+            display: inline-block;
+            padding: 10px;
+            margin-left: 20px;
+        }
     </style>
 </head>
+
 <body>
-    <h2>Relatório de Visitas</h2>
-    <a class="btn-exportar" href="exportar.php" target="_blank">📥 Exportar CSV</a>
+    <div class="cabecalho">
+        <div class="relatorio">
+            <h2>Relatório de Visitas</h2>
+        </div>
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li><a href="grafico_visitas.php" target="_blank">📊 Grafico por Minuto</a></li>
+                    <li><a href="grafico_visitas_hora.php" target="_blank">💹 Grafico por Hora</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="exportar">
+            <a class="btn-exportar" href="exportar.php" target="_blank">📥 Exportar CSV</a>
+        </div>
+    </div>
+
     <table>
         <thead>
             <tr>
@@ -67,4 +132,5 @@ try {
         </tbody>
     </table>
 </body>
+
 </html>

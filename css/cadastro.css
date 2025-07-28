@@ -223,8 +223,10 @@ section {
 #cadastro .container {
     width: 440px;
     height: auto;
-    border: solid 1px #300513;
+    border: solid 1px #ff0048;
     padding: 40px;
+    background: #300513;
+    border-radius: 5px;
 }
 
 .container h2 {

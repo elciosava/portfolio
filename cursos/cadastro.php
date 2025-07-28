@@ -40,7 +40,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <img src="../imagem/graduation_school.svg" alt="logo">
         <nav>
             <ul>
-                <li><a href="cadastro.php" class="botao"><span>Criar conta</span></a></li>
                 <li><a href="login.php" class="botao"><span>Entrar</span></a></li>
             </ul>
         </nav>

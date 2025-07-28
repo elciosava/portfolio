@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>Gráfico de Visitas por Minuto</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        #grafico {
+            max-width: 700px;
+            max-height: 350px;
+            width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
+
 <body>
     <h2>Visitas por Minuto (últimos 10 min)</h2>
     <canvas id="grafico" width="800" height="400"></canvas>
@@ -20,9 +30,11 @@
                     label: 'Visitas',
                     data: [],
                     borderColor: 'blue',
-                    backgroundColor: 'rgba(0, 0, 255, 0.1)',
+                    backgroundColor: 'rgba(0, 30, 255, 1)',
                     fill: true,
-                    tension: 0.3
+                    tension: 0.3,
+                    barPercentage: 0.5,
+                    categoryPercentage: 0.6
                 }]
             },
             options: {
@@ -51,4 +63,5 @@
         atualizarGrafico();
     </script>
 </body>
+
 </html>
