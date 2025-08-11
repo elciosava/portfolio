@@ -109,8 +109,9 @@ h2 {
 
 .card-img {
   height: 200px;
-  background-size: cover;
+  background-size: 200px;
   background-position: center;
+  background-repeat: no-repeat;
   transition: transform 0.4s ease;
 }
 

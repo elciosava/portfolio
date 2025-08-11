@@ -50,21 +50,21 @@
         <h2>Projetos</h2>
         <div class="projetos-grid">
             <div class="card fade-in">
-                <div class="card-img" style="background-image: url('imagem/projeto1.jpg');"></div>
+                <div class="card-img" style="background-image: url('imagem/internet_devices.svg');"></div>
                 <div class="card-content">
                     <h3>Site Institucional</h3>
                     <p>Desenvolvimento de um site moderno e responsivo para uma empresa de tecnologia.</p>
                 </div>
             </div>
             <div class="card fade-in">
-                <div class="card-img" style="background-image: url('imagem/projeto2.jpg');"></div>
+                <div class="card-img" style="background-image: url('imagem/systens.svg');"></div>
                 <div class="card-content">
                     <h3>Sistema de Vendas</h3>
                     <p>Aplicação web para gerenciamento de estoque, vendas e relatórios.</p>
                 </div>
             </div>
             <div class="card fade-in">
-                <div class="card-img" style="background-image: url('imagem/projeto3.jpg');"></div>
+                <div class="card-img" style="background-image: url('imagem/graduation_school.svg');"></div>
                 <div class="card-content">
                     <h3>Curso Online</h3>
                     <p>Aprenda a programar com aulas 100% online, no seu ritmo e onde quiser.</p>
@@ -102,7 +102,6 @@
     </footer>
 
     <script>
-        // FAQ
         document.querySelectorAll('.faq-item').forEach(item => {
             item.addEventListener('click', () => {
                 item.classList.toggle('active');
