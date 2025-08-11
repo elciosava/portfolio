@@ -2,262 +2,176 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9790715004022716"
-        crossorigin="anonymous"></script>
-    <meta name="google-adsense-account" content="ca-pub-9790715004022716">
-    <link rel="icon" href="imagem/favicon.svg" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio Elcio Sava | Sites, Sistemas e PCs Gamer Customizados</title>
+    <title>Portfólio Elcio Sava | Foxtron</title>
     <meta name="description"
-        content="Portfólio de Elcio Sava, especialista em criação de sites, sistemas personalizados e montagem de PCs gamer customizados. Veja meus projetos e entre em contato!">
-    <meta name="robots" content="index, follow">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
-    </style>
+        content="Portfólio de Elcio Sava, especialista em criação de sites, sistemas personalizados e PCs gamer customizados.">
     <link rel="stylesheet" href="css/style.css">
-    <title>Foxtron</title>
+    <link rel="icon" href="imagem/favicon.svg" type="image/x-icon">
+
+    <!-- Fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@400;600&family=Rajdhani:wght@500;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
+
     <div class="bolhas">
-        <div class="bolha"></div>
-        <div class="bolha"></div>
-        <div class="bolha"></div>
-        <div class="bolha"></div>
-        <div class="bolha"></div>
+        <?php for ($i = 0; $i < 15; $i++): ?>
+            <div class="bolha" style="
+        width:<?= rand(5, 15) ?>px;
+        height:<?= rand(5, 15) ?>px;
+        top:<?= rand(0, 100) ?>%;
+        left:<?= rand(0, 100) ?>%;
+        animation-delay: <?= rand(0, 5) ?>s;"></div>
+        <?php endfor; ?>
     </div>
 
-    <header class="navbar">
-        <img src="imagem/folder_code.svg" alt="logo">
+    <header>
+        <h1>Foxtron</h1>
         <nav>
-            <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#experiencia">Experiencia</a></li>
-                <li><a href="#skills">Habilidades</a></li>
-                <li><a href="#faqs">FAQ's</a></li>
-            </ul>
-        </nav>
-        <nav>
-            <ul>
-                <li><a href="#contato" class="botao"><span>Contato</span></a></li>
-            </ul>
+            <a href="#sobre">Sobre</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contato">Contato</a>
         </nav>
     </header>
 
-    <section id="inicio">
-        <div class="container">
-            <div class="texto_header">
-                <h1>Portfólio Profissional</h1>
-                <h1>
-                    <span class="destaque" id="texto-dinamico">Sites</span>
-                </h1>
-                <p>Aqui você encontra alguns dos meus projetos,</p>
-                <p>reunindo tecnologia, design e performance.</p>
+    <section id="sobre" class="fade-in">
+        <h2>Sobre Mim</h2>
+        <p>Sou Elcio Sava, especialista em desenvolvimento de sites, sistemas personalizados e montagem de PCs gamer
+            customizados. Trabalho com foco em qualidade, desempenho e design moderno.</p>
+    </section>
+
+    <section id="projetos" class="fade-in">
+        <h2>Projetos</h2>
+        <div class="projetos-grid">
+            <div class="card fade-in">
+                <div class="card-img" style="background-image: url('imagem/projeto1.jpg');"></div>
+                <div class="card-content">
+                    <h3>Site Institucional</h3>
+                    <p>Desenvolvimento de um site moderno e responsivo para uma empresa de tecnologia.</p>
+                </div>
             </div>
-            <div class="scroll-down"
-                onclick="document.querySelector('#servicos').scrollIntoView({ behavior: 'smooth' });">
-                <svg class="arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff"
-                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="12" y1="5" x2="12" y2="19"></line>
-                    <polyline points="19 12 12 19 5 12"></polyline>
-                </svg>
+            <div class="card fade-in">
+                <div class="card-img" style="background-image: url('imagem/projeto2.jpg');"></div>
+                <div class="card-content">
+                    <h3>Sistema de Vendas</h3>
+                    <p>Aplicação web para gerenciamento de estoque, vendas e relatórios.</p>
+                </div>
+            </div>
+            <div class="card fade-in">
+                <div class="card-img" style="background-image: url('imagem/projeto3.jpg');"></div>
+                <div class="card-content">
+                    <h3>Curso Online</h3>
+                    <p>Aprenda a programar com aulas 100% online, no seu ritmo e onde quiser.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="servicos">
-        <div class="cards">
-            <div class="card">
-                <img src="imagem/internet_devices.svg" alt="">
-                <h3>Criação de Sites & Sistemas</h3>
-                <p>Desenvolvimento de sites modernos, responsivos e sistemas personalizados para empresas e projetos.
+    <section id="faq" class="fade-in">
+        <h2>Perguntas Frequentes</h2>
+        <div class="faq">
+            <div class="faq-item">
+                <h3>Quais serviços você oferece? <span>+</span></h3>
+                <p>Criação de sites, sistemas web, e montagem de computadores personalizados para games e produtividade.
                 </p>
             </div>
-            <div class="card">
-                <img src="imagem/graduation_school.svg" alt="">
-                <h3>Cursos e Treinamentos</h3>
-                <p>Capacitação em tecnologia, cursos de desenvolvimento web e muito mais, com foco na prática.</p>
-                <a href="cursos/index.php" class="botao-card"><span>Conhecer</span></a>
-
+            <div class="faq-item">
+                <h3>Você atende em todo o Brasil? <span>+</span></h3>
+                <p>Sim! Atendo clientes de todo o Brasil de forma online e envio PCs montados para qualquer estado.</p>
             </div>
-            <div class="card">
-                <img src="imagem/support_rede.svg" alt="">
-                <h3>Suporte & Consultoria</h3>
-                <p>Consultoria, manutenção e otimização de sistemas e equipamentos, com foco em performance e segurança.
-                </p>
-            </div>
-        </div>
-        <div class="slider">
-            <div class="slider-row left">
-                <div class="slider-track">
-                    <div class="item"><img src="imagem/hands.svg" alt=""><span>Consultoria</span></div>
-                    <div class="item"><img src="imagem/systens.svg" alt="">Sistemas</div>
-                    <div class="item"><img src="imagem/support_rede.svg" alt=""><span>Suporte</span></div>
-                    <div class="item"><img src="imagem/rss_feed.svg" alt=""><span>Blog</span></div>
-                    <div class="item"><img src="imagem/shopping.svg" alt=""><span>Loja online</span></div>
-                    <div class="item"><img src="imagem/site.svg" alt=""><span>Sites</span></div>
-                    <div class="item"><img src="imagem/router_internet.svg" alt=""><span>Redes domésticas</span></div>
-                    <div class="item"><img src="imagem/services.svg" alt=""><span>Serviços</span></div>
-                    <div class="item"><img src="imagem/host.svg" alt="">T.I.</div>
-                    <div class="item"><img src="imagem/graduation_school.svg" alt=""><span>Cursos</span></div>
-                    <div class="item"><img src="imagem/training.svg" alt=""><span>Treinamentos</span></div>
-                    <div class="item"><img src="imagem/hardware.svg" alt=""><span>Equipamentos</span></div>
-                    <div class="item"><img src="imagem/map.svg" alt=""><span>Projetos</span></div>
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-    <section id="experiencia">
-        <div class="head">
-            <h2><span class="numero">12+</span>
-                <h2>Anos de Experiência em</h2>
-                <h2><span class="destaque">Desenvolvimento Web!</span></h2>
-                <p class="subtitulo">
-                    Projetos Criativos, Sistemas Personalizados e Soluções Digitais Sob Medida.
-                </p>
-        </div>
-
-        <div class="container">
-            <div class="item-grande">
-                <div class="ano">
-                    <h2>12+ </h2>
-                    <h3>Anos de experiencia</h3>
-                </div>
-                <div class="ano-texto">
-                    <p>Explore meu portfólio com soluções reais e criativas para o seu negócio.</p>
-                </div>
-
-            </div>
-            <div class="item-pequeno brilha">
-                <h3>50+</h3>
-                <p>Projetos concluidos na web.</p>
-            </div>
-            <div class="item-pequeno brilha">
-                <h3>100+</h3>
-                <p>Cursos já fornecidos.</p>
-            </div>
-            <div class="item-pequeno brilha">
-                <h3>20+</h3>
-                <p>Avaliações positivas no Google.</p>
-            </div>
-            <div class="item-pequeno brilha">
-                <h3>1,000+</h3>
-                <p>Clientes atendidos.</p>
+            <div class="faq-item">
+                <h3>Qual o prazo médio para um site? <span>+</span></h3>
+                <p>O prazo varia conforme o projeto, mas geralmente entre 15 e 30 dias.</p>
             </div>
         </div>
     </section>
 
-    <section id="skills">
-        <div class="linguagens">
-            <h2>Minhas Habilidades</h2>
-
-            <div class="skill">
-                <div class="legenda porcent-100"><span>HTML</span><span>100%</span></div>
-                <div class="progress-bar">
-                    <div class="progress" data-value="100%"></div>
-                </div>
-            </div>
-
-            <div class="skill">
-                <div class="legenda porcent-80"><span>CSS</span><span>80%</span></div>
-                <div class="progress-bar">
-                    <div class="progress" data-value="80%"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <div class="legenda porcent-80"><span>SQL</span><span>80%</span></div>
-                <div class="progress-bar">
-                    <div class="progress" data-value="80%"></div>
-                </div>
-            </div>
-
-            <div class="skill">
-                <div class="legenda porcent-75"><span>PHP</span><span>75%</span></div>
-                <div class="progress-bar">
-                    <div class="progress" data-value="75%"></div>
-                </div>
-            </div>
-
-            <div class="skill">
-                <div class="legenda porcent-45"><span>JavaScript</span><span>45%</span></div>
-                <div class="progress-bar">
-                    <div class="progress" data-value="45%"></div>
-                </div>
-            </div>
-
-        </div>
+    <section id="contato" class="fade-in">
+        <h2>Contato</h2>
+        <p>Entre em contato pelo e-mail <b>elcio@foxtron.com</b> ou pelas redes sociais.</p>
     </section>
 
-    <section id="faqs">
-
-    </section>
-    <section id="contato">
-        <!-- anuncios do google -->
-        <script async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9790715004022716"
-            crossorigin="anonymous"></script>
-        <!-- fox_nuncio -->
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9790715004022716"
-            data-ad-slot="7568420639" data-ad-format="auto" data-full-width-responsive="true"></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-    </section>
+    <footer>
+        &copy; <?= date('Y') ?> Foxtron - Todos os direitos reservados.
+    </footer>
 
     <script>
-        const palavras = ["Sites", "Sistemas", "Cursos", "Consultoria"];
-        let index = 0;
-        const texto = document.getElementById("texto-dinamico");
-
-        setInterval(() => {
-            index = (index + 1) % palavras.length;
-            texto.style.opacity = 0;
-            setTimeout(() => {
-                texto.textContent = palavras[index];
-                texto.style.opacity = 1;
-            }, 500);
-        }, 2500);
-
-        const cards = document.querySelectorAll('.brilha');
-
-        cards.forEach(card => {
-            card.addEventListener('mousemove', (e) => {
-                const rect = card.getBoundingClientRect();
-                const x = ((e.clientX - rect.left) / rect.width) * 100;
-                const y = ((e.clientY - rect.top) / rect.height) * 100;
-                card.style.setProperty('--x', `${x}%`);
-                card.style.setProperty('--y', `${y}%`);
-            });
-            card.addEventListener('mouseleave', () => {
-                card.style.removeProperty('--x');
-                card.style.removeProperty('--y');
+        // FAQ
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('active');
+                const span = item.querySelector('span');
+                span.textContent = item.classList.contains('active') ? '-' : '+';
             });
         });
 
-        document.querySelectorAll('.progress').forEach(bar => {
-            const value = bar.getAttribute('data-value');
-            setTimeout(() => {
-                bar.style.width = value;
-            }, 500);
+        // Fade-in on scroll
+        function revelarAoRolar() {
+            const elementos = document.querySelectorAll('.fade-in');
+            const windowHeight = window.innerHeight;
+            const triggerPoint = 100;
+
+            elementos.forEach(el => {
+                const posicaoTopo = el.getBoundingClientRect().top;
+                if (posicaoTopo < windowHeight - triggerPoint) {
+                    el.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revelarAoRolar);
+        window.addEventListener('load', revelarAoRolar);
+
+        // Definir altura do header como variável CSS
+        const header = document.querySelector('header');
+        document.documentElement.style.setProperty('--header-height', `${header.offsetHeight}px`);
+
+        // FAQ
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('active');
+                const span = item.querySelector('span');
+                span.textContent = item.classList.contains('active') ? '-' : '+';
+            });
         });
 
+        // Fade-in on scroll
+        function revelarAoRolar() {
+            const elementos = document.querySelectorAll('.fade-in');
+            const windowHeight = window.innerHeight;
+            const triggerPoint = 100;
 
-        window.addEventListener('scroll', function () {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 60) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
+            elementos.forEach(el => {
+                const posicaoTopo = el.getBoundingClientRect().top;
+                if (posicaoTopo < windowHeight - triggerPoint) {
+                    el.classList.add('visible');
+                }
+            });
+        }
+        window.addEventListener('scroll', revelarAoRolar);
+        window.addEventListener('load', revelarAoRolar);
+
+        // Scroll suave com offset dinâmico
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                const offset = header.offsetHeight;
+
+                window.scrollTo({
+                    top: target.offsetTop - offset,
+                    behavior: 'smooth'
+                });
+            });
         });
+
     </script>
-
 </body>
 
 </html>
