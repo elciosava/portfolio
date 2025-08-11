@@ -102,31 +102,6 @@
     </footer>
 
     <script>
-        document.querySelectorAll('.faq-item').forEach(item => {
-            item.addEventListener('click', () => {
-                item.classList.toggle('active');
-                const span = item.querySelector('span');
-                span.textContent = item.classList.contains('active') ? '-' : '+';
-            });
-        });
-
-        // Fade-in on scroll
-        function revelarAoRolar() {
-            const elementos = document.querySelectorAll('.fade-in');
-            const windowHeight = window.innerHeight;
-            const triggerPoint = 100;
-
-            elementos.forEach(el => {
-                const posicaoTopo = el.getBoundingClientRect().top;
-                if (posicaoTopo < windowHeight - triggerPoint) {
-                    el.classList.add('visible');
-                }
-            });
-        }
-
-        window.addEventListener('scroll', revelarAoRolar);
-        window.addEventListener('load', revelarAoRolar);
-
         // Definir altura do header como variável CSS
         const header = document.querySelector('header');
         document.documentElement.style.setProperty('--header-height', `${header.offsetHeight}px`);
